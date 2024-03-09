@@ -1,6 +1,7 @@
 "use client";
 
 import ContactUs from "@/components/ContactUs";
+import Footer from "@/components/Footer";
 import ImageSlider from "@/components/ImageSlider";
 import LocationInFormation from "@/components/LocationInformation";
 import PropertyInformation from "@/components/PropertyInformation";
@@ -12,6 +13,7 @@ export default function Home() {
       <PropertyInformation />
       <LocationInFormation />
       <ContactUs />
+      <Footer />
     </main>
   );
 }
