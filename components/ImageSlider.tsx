@@ -39,11 +39,11 @@ function ImageSlider() {
   ];
 
   return (
-    <div className="w-full h-[800px] overflow-hidden">
+    <div className="w-full h-auto sm:h-[700px] overflow-hidden max-w-screen-2xl">
       <Slider {...settings}>
         {imageURLs.map((url, index) => (
           <>
-            <div className="absolute flex flex-col items-center w-full justify-center h-full text-white">
+            <div className="hidden sm:flex top-[64px] absolute flex-col items-center w-full justify-center h-full text-white">
               <div className="px-20 py-8">
                 <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl">
                   Silver palm

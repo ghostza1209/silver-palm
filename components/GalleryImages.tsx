@@ -19,27 +19,34 @@ export default function GalleryImages() {
   const handleMoveNext = () => setIndex(nextIndex);
 
   return (
-    <div className="w-full">
-      <Gallery
-        images={images}
-        onClick={handleClick}
-        enableImageSelection={false}
-      />
-      {!!currentImage && (
-        /* @ts-ignore */
-        <Lightbox
-          mainSrc={currentImage.original}
-          imageTitle={currentImage.caption}
-          mainSrcThumbnail={currentImage.src}
-          nextSrc={nextImage.original}
-          nextSrcThumbnail={nextImage.src}
-          prevSrc={prevImage.original}
-          prevSrcThumbnail={prevImage.src}
-          onCloseRequest={handleClose}
-          onMovePrevRequest={handleMovePrev}
-          onMoveNextRequest={handleMoveNext}
+    <>
+      <div className="w-full pl-3 pb-5 sm:hidden">
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 border-s-4 border-amber-500 pl-2">
+          Gallery
+        </h1>
+      </div>
+      <div className="w-full">
+        <Gallery
+          images={images}
+          onClick={handleClick}
+          enableImageSelection={false}
         />
-      )}
-    </div>
+        {!!currentImage && (
+          /* @ts-ignore */
+          <Lightbox
+            mainSrc={currentImage.original}
+            imageTitle={currentImage.caption}
+            mainSrcThumbnail={currentImage.src}
+            nextSrc={nextImage.original}
+            nextSrcThumbnail={nextImage.src}
+            prevSrc={prevImage.original}
+            prevSrcThumbnail={prevImage.src}
+            onCloseRequest={handleClose}
+            onMovePrevRequest={handleMovePrev}
+            onMoveNextRequest={handleMoveNext}
+          />
+        )}
+      </div>
+    </>
   );
 }
