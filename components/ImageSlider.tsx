@@ -52,6 +52,12 @@ function ImageSlider() {
                   Luxury villa with affordable price.
                 </p>
                 <div className="w-[150px] h-[3px] bg-white border my-0 mx-auto"></div>
+                <p className="mt-6 text-3xl subpixel-antialiased font-bold text-center animate-bounce">
+                  Start from{" "}
+                  <span className="text-amber-500 italic drop-shadow-lg">
+                    12.9 MB
+                  </span>
+                </p>
               </div>
             </div>
             <img key={`img_slider_${index}`} src={url} />
