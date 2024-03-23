@@ -2,7 +2,7 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import React from "react";
+import React, { useCallback, useMemo } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 
@@ -20,23 +20,16 @@ function ImageSlider() {
     cssEase: "linear",
   };
 
-  const imageURLs = [
-    "/images/internal/IMG_0234.JPG",
-    "/images/internal/IMG_0235.JPG",
-    "/images/internal/IMG_0236.JPG",
-    "/images/internal/IMG_0237.JPG",
-    "/images/internal/IMG_0238.JPG",
-    // "/images/internal/IMG_0239.JPG",
-    "/images/internal/IMG_0240.JPG",
-    "/images/internal/IMG_0241.JPG",
-    "/images/internal/IMG_0242.JPG",
-    "/images/internal/IMG_0243.JPG",
-    "/images/internal/IMG_0244.JPG",
-    "/images/internal/IMG_0245.JPG",
-    "/images/internal/IMG_0246.JPG",
-    "/images/internal/IMG_0247.JPG",
-    "/images/internal/IMG_0248.JPG",
-  ];
+  const imageURLs = useMemo(() => {
+    let imageURLs = [];
+    for (let i = 1; i < 11; i++) {
+      if (i === 6) {
+        continue;
+      }
+      imageURLs.push(`/images/internal/p${i}.jpg`);
+    }
+    return imageURLs;
+  }, []);
 
   return (
     <div className="w-full h-auto sm:h-[700px] overflow-hidden max-w-screen-2xl">

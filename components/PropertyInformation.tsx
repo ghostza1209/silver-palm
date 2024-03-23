@@ -13,7 +13,10 @@ const features = [
     description: "8 x 3 Meters",
   },
   { name: "Bedrooms", description: "3" },
-  { name: "Bathrooms", description: "3" },
+  { name: "Bathrooms", description: "4" },
+  { name: "Gym room", description: "1" },
+  { name: "Study room", description: "1" },
+  { name: "Storage room", description: "1" },
   {
     name: "Villa Ownership",
     description: "Foreign Ownership",
@@ -73,17 +76,17 @@ export default function PropertyInformation() {
       </div>
       <div className="grid grid-cols-1 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
         <img
-          src="/images/internal/IMG_0244.JPG"
+          src="/images/internal/p11.jpg"
           alt="Living Room"
           className="rounded-lg bg-gray-100"
         />
         <img
-          src="/images/internal/IMG_0237.JPG"
+          src="/images/internal/p4.jpg"
           alt="Living Room"
           className="rounded-lg bg-gray-100"
         />
         <img
-          src="/images/external/IMG_0249.JPG"
+          src="/images/external/outside-1.jpg"
           alt="Walnut card tray filled with cards and card angled in dedicated groove."
           className="rounded-lg bg-gray-100"
         />
