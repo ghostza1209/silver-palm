@@ -38,7 +38,7 @@ function ImageSlider() {
           <>
             <div className="hidden sm:flex top-[64px] absolute flex-col items-center w-full justify-center h-full text-white">
               <div className="px-20 py-8">
-                <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl">
+                <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl drop-shadow-md">
                   Silver palm
                 </h1>
                 <p className="mt-6 text-lg leading-8">
