@@ -1,6 +1,10 @@
 const features = [
   { name: "Storeys", description: 2 },
   {
+    name: "Plot size",
+    description: "392 SqM",
+  },
+  {
     name: "Indoor Area",
     description: "244 SqM",
   },
@@ -17,6 +21,7 @@ const features = [
   { name: "Gym room", description: "1" },
   { name: "Study room", description: "1" },
   { name: "Storage room", description: "1" },
+  { name: "Laundry room", description: "1" },
   {
     name: "Villa Ownership",
     description: "Foreign Ownership",
