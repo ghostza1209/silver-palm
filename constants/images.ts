@@ -143,6 +143,6 @@ export const images: CustomImage[] = [
     original: "//images/external/floorplan-1st-floor.jpg",
     width: 750,
     height: 500,
-    caption: "Floor plan (1st floor)",
+    caption: "Floor plan (2nd floor)",
   },
 ];

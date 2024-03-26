@@ -10,13 +10,10 @@ export default function LocationInFormation() {
           </h1>
           <p className="mt-4 text-base text-gray-500">
             Silver Palm villa are ideally located on the northwest coast of
-            Phuket, Thailand in the beautiful Pasak area of Cherngtalay
-            subdistrict — one of the most prestigious and exclusive residential
-            areas on the island. Careful consideration was taken in selecting
-            this location, which is not only centrally located on the island,
-            but strikes a strategic balance in favor of access to the airport,
-            the finest shopping and dining, schools, entertainment, and, of
-            course, beaches.
+            Phuket, Thailand in Si-sunthon subdistrict. Careful consideration was taken in selecting this location,
+            which is not only centrally located on the island, but strikes a
+            strategic balance in favor of access to the airport, the finest
+            shopping and dining, schools, entertainment, and, beaches.
           </p>
           <p className="pt-10 font-semibold">Nearby Locations</p>
           <div className="text-gray-500">
