@@ -2,7 +2,7 @@ const features = [
   { name: "Storeys", description: 2 },
   {
     name: "Plot size",
-    description: "392 SqM",
+    description: "368 SqM",
   },
   {
     name: "Indoor Area",
