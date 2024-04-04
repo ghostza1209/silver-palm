@@ -1,14 +1,41 @@
 "use client";
 
-import React, { SyntheticEvent, useState } from "react";
+import React, { SyntheticEvent, useRef, useState } from "react";
 import toast from "react-hot-toast";
+import ReCAPTCHA from "react-google-recaptcha";
+import { verifyCaptcha } from "@/lib/captcha";
+import * as Yup from 'yup'
+
+const schema = Yup.object().shape({
+  name: Yup.string().required(),
+  email: Yup.string().email().required(),
+});
 
 export default function ContactUs(): React.JSX.Element {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [isVerified, setIsVerified] = useState<boolean>(false);
+
+  const handleCaptchaSubmission = async (token: string | null) => {
+    // Server function to verify captcha
+    await verifyCaptcha(token)
+      .then(() => setIsVerified(true))
+      .catch(() => setIsVerified(false));
+  };
 
   const onSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
-    console.log(e.target);
+
+    if (!isVerified) {
+        toast.error(
+          "Please complete reCaptcha",
+          {
+            duration: 10000,
+          }
+        );
+      return;
+    }
+
     const formData = new FormData(e.target as HTMLFormElement);
 
     setIsSubmitting(true);
@@ -133,6 +160,13 @@ export default function ContactUs(): React.JSX.Element {
               />
             </div>
           </div>
+        </div>
+        <div className="mt-10 mx-auto">
+          <ReCAPTCHA
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+            ref={recaptchaRef}
+            onChange={handleCaptchaSubmission}
+          />
         </div>
         <div className="mt-10">
           <button
