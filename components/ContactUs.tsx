@@ -163,7 +163,7 @@ export default function ContactUs(): React.JSX.Element {
             </div>
           </div>
         </div>
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 flex flex-col">
           <ReCAPTCHA
             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
             ref={recaptchaRef}
