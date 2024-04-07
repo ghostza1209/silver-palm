@@ -2,9 +2,8 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import React, { useCallback, useMemo } from "react";
+import React, { useMemo } from "react";
 import Slider from "react-slick";
-import Image from "next/image";
 
 function ImageSlider() {
   const settings = {
@@ -35,7 +34,7 @@ function ImageSlider() {
     <div className="w-full h-auto sm:h-[700px] overflow-hidden max-w-screen-2xl">
       <Slider {...settings}>
         {imageURLs.map((url, index) => (
-          <>
+          <div key={`img_slider_${index}`}>
             <div className="hidden sm:flex top-[64px] absolute flex-col items-center w-full justify-center h-full text-white">
               <div className="px-20 py-8">
                 <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl drop-shadow-md">
@@ -53,8 +52,8 @@ function ImageSlider() {
                 </p>
               </div>
             </div>
-            <img key={`img_slider_${index}`} src={url} />
-          </>
+            <img src={url} />
+          </div>
         ))}
       </Slider>
     </div>
