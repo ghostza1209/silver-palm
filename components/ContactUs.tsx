@@ -56,7 +56,10 @@ export default function ContactUs(): React.JSX.Element {
         duration: 5000,
       }
     );
+
     reset();
+    recaptchaRef.current?.reset();
+    setIsVerified(false);
   };
 
   return (
