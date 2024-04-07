@@ -8,6 +8,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { addContactToGs } from "@/actions/formAction";
 import { AddContactToGs } from "@/types/form";
 import { z } from "zod";
+import clsx from "clsx";
 import { zodResolver } from "@hookform/resolvers/zod";
 import isMobilePhone from "validator/lib/isMobilePhone";
 
@@ -56,7 +57,10 @@ export default function ContactUs(): React.JSX.Element {
         duration: 5000,
       }
     );
+
     reset();
+    recaptchaRef.current?.reset();
+    setIsVerified(false);
   };
 
   return (
@@ -122,9 +126,14 @@ export default function ContactUs(): React.JSX.Element {
                 {...register("email")}
                 id="email"
                 autoComplete="email"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className={clsx(
+                  "block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6",
+                  errors.email?.message
+                    ? "border-1 border-rose-500"
+                    : "border-0 focus:ring-indigo-600"
+                )}
               />
-              <p className="mt-3 text-red-600">{errors.email?.message}</p>
+              <p className="mt-3 text-rose-500">{errors.email?.message}</p>
             </div>
           </div>
           <div className="sm:col-span-2">
@@ -140,9 +149,14 @@ export default function ContactUs(): React.JSX.Element {
                 {...register("phoneNumber")}
                 id="phone-number"
                 autoComplete="tel"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className={clsx(
+                  "block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6",
+                  errors?.phoneNumber
+                    ? "border-1 border-rose-500"
+                    : "border-0 focus:ring-indigo-600"
+                )}
               />
-              <p className="mt-3 text-red-600">{errors.phoneNumber?.message}</p>
+              <p className="mt-3 text-red-500">{errors.phoneNumber?.message}</p>
             </div>
           </div>
           <div className="sm:col-span-2">
