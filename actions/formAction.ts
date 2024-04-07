@@ -1,6 +1,7 @@
 "use server";
 
 import { AddContactToGs } from "@/types/form";
+import {format} from 'date-fns';
 
 export async function addContactToGs(data: AddContactToGs) {
   const formData = new FormData();
@@ -9,9 +10,10 @@ export async function addContactToGs(data: AddContactToGs) {
   formData.append("phone-number", data.phoneNumber);
   formData.append("email", data.email);
   formData.append("message", data.message);
+  formData.append('date', format(new Date(), 'MM/dd/yyyy H:i:s'));
 
   fetch(
-    "https://script.google.com/macros/s/AKfycbxkuaLvpI4J_dD1K0nB8zkK7PQuZiFuu4JwtSrKrRHZZzH3gQV1xOaMJAWDWoO2R5zSqg/exec",
+    "https://script.google.com/macros/s/AKfycby3wN58jv_U6UNpR_bFAfF5HjDsdpol3-zI2dCxuruZ87oNZCu31OAn3fLl03lMyl14uw/exec",
     {
       method: "POST",
       body: formData,
