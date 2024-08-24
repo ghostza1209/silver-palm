@@ -139,8 +139,22 @@ export const images: CustomImage[] = [
     caption: "outside view",
   },
   {
+    src: "/images/external/pool-view.jpg",
+    original: "//images/external/pool-view.jpg",
+    width: 850,
+    height: 500,
+    caption: "Pool View",
+  },
+  {
     src: "/images/external/floorplan-1st-floor.jpg",
     original: "//images/external/floorplan-1st-floor.jpg",
+    width: 750,
+    height: 500,
+    caption: "Floor plan (1st floor)",
+  },
+  {
+    src: "/images/external/floorplan-2nd-floor.jpg",
+    original: "//images/external/floorplan-2nd-floor.jpg",
     width: 750,
     height: 500,
     caption: "Floor plan (2nd floor)",
