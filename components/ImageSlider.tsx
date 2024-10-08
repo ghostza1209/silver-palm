@@ -41,7 +41,7 @@ function ImageSlider() {
                   Silver palm
                 </h1>
                 <p className="mt-6 text-lg leading-8">
-                  Luxury villa with affordable price.
+                  Your Dream Villa, Designed for Every Lifestyle
                 </p>
                 <div className="w-[150px] h-[3px] bg-white border my-0 mx-auto"></div>
                 <p className="mt-6 text-3xl subpixel-antialiased font-bold text-center animate-bounce">
