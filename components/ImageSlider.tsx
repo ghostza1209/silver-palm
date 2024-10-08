@@ -47,7 +47,7 @@ function ImageSlider() {
                 <p className="mt-6 text-3xl subpixel-antialiased font-bold text-center animate-bounce">
                   Start from{" "}
                   <span className="text-amber-500 italic drop-shadow-lg">
-                    12.9 MB
+                    13.9 MB
                   </span>
                 </p>
               </div>
