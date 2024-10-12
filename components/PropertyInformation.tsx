@@ -6,7 +6,7 @@ const features = [
   },
   {
     name: "Indoor Area",
-    description: "244 SqM",
+    description: "351.6 SqM",
   },
   {
     name: "Outdoor Area",
@@ -24,15 +24,15 @@ const features = [
   { name: "Laundry room", description: "1" },
   {
     name: "Villa Ownership",
-    description: "Foreign Ownership",
+    description: "Company, Thai Ownership",
   },
   {
     name: "Land Ownership",
-    description: "Thai Ownership",
+    description: "Company, Thai Ownership",
   },
   {
     name: "Furniture",
-    description: "Partly Furnished",
+    description: "Unfurnished",
   },
   {
     name: "CAM Fee",
