@@ -6,10 +6,10 @@ const features = [
   },
   {
     name: "Indoor Area",
-    description: "401.6 SqM",
+    description: "240 SqM",
   },
   {
-    name: "Outdoor Area",
+    name: "Outdoor Area (including garden)",
     description: "247 SqM",
   },
   {
@@ -64,7 +64,7 @@ export default function PropertyInformation() {
           Information
         </h2>
         <h3 className="mt-4 text-gray-500">
-          This luxury pool villa is a 244 SqM with 3 bedrooms, and 4 bathrooms that is available for sale in Sri-Sunthon, Phuket, Thailand.
+          This luxury pool villa is a 401.6 SqM with 3 bedrooms, and 4 bathrooms that is available for sale in Sri-Sunthon, Phuket, Thailand.
         </h3>
 
         <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
