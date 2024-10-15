@@ -6,11 +6,11 @@ const features = [
   },
   {
     name: "Indoor Area",
-    description: "351.6 SqM",
+    description: "401.6 SqM",
   },
   {
     name: "Outdoor Area",
-    description: "50 SqM",
+    description: "247 SqM",
   },
   {
     name: "Pool Size",
