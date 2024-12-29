@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import React, { useMemo } from "react";
 import Slider from "react-slick";
+import Image from "next/image";
 
 function ImageSlider() {
   const settings = {
@@ -20,23 +21,24 @@ function ImageSlider() {
   };
 
   const imageURLs = useMemo(() => {
-    let imageURLs = [];
-    for (let i = 1; i < 11; i++) {
-      if (i === 6) {
-        continue;
-      }
-      imageURLs.push(`/images/internal/p${i}.jpg`);
-    }
-    return imageURLs;
+    return [
+      "/images/front-view.jpg",
+      "/images/back.jpg",
+      "/images/living-room_2.jpg",
+      "/images/master-bedroom-bathroom_5.jpg",
+      "/images/kitchen-room_2.jpg",
+      "/images/master-bedroom_3.jpg",
+      "/images/master-bedroom-bathroom_4.jpg",
+    ];
   }, []);
 
   return (
-    <div className="w-full h-auto sm:h-[700px] overflow-hidden max-w-screen-2xl">
+    <div className="w-full overflow-hidden max-w-screen-2xl">
       <Slider {...settings}>
         {imageURLs.map((url, index) => (
-          <div key={`img_slider_${index}`}>
-            <div className="hidden sm:flex top-[64px] absolute flex-col items-center w-full justify-center h-full text-white">
-              <div className="px-20 py-8">
+          <div key={`img_slider_${index}`} className="h-[200px] md:h-[800px]">
+            <div className="hidden sm:flex top-0 absolute flex-col items-center w-full justify-center h-full text-white">
+              <div className="px-20 py-8 z-10">
                 <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl drop-shadow-md">
                   Silver palm
                 </h1>
@@ -52,7 +54,12 @@ function ImageSlider() {
                 </p>
               </div>
             </div>
-            <img src={url} />
+            <Image
+              fill
+              src={url}
+              sizes="(max-width: 800px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              alt="slider"
+            />
           </div>
         ))}
       </Slider>

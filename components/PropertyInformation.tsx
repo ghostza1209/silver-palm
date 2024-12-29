@@ -80,17 +80,17 @@ export default function PropertyInformation() {
       </div>
       <div className="grid grid-cols-1 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
         <img
-          src="/images/internal/p11.jpg"
+          src="/images/dining-room.jpg"
           alt="Living Room"
           className="rounded-lg bg-gray-100"
         />
         <img
-          src="/images/internal/p4.jpg"
+          src="/images/front-view_2.jpg"
           alt="Living Room"
           className="rounded-lg bg-gray-100"
         />
         <img
-          src="/images/external/outside-1.jpg"
+          src="/images/pool-view_2.jpg"
           alt="Walnut card tray filled with cards and card angled in dedicated groove."
           className="rounded-lg bg-gray-100"
         />
