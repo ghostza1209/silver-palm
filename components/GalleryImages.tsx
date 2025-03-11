@@ -8,7 +8,7 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/plugins/captions.css";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
-import { images as originalImages} from "@/constants/images";
+import {Image, images as originalImages} from "@/constants/images";
 import { ReactNode } from "react";
 
 // Helper function to convert ReactNode to string
@@ -44,7 +44,7 @@ export default function GalleryImages() {
   const [index, setIndex] = useState(0);
 
   // Transform images to the format expected by yet-another-react-lightbox
-  const images: LightboxSlide[] = originalImages.map((image: CustomImage) => ({
+  const images: LightboxSlide[] = originalImages.map((image: Image) => ({
     src: fixImagePath(image.original),
     thumbnail: image.src,
     width: image.width,
