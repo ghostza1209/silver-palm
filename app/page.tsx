@@ -4,6 +4,7 @@ import GalleryImages from "@/components/GalleryImages";
 import ImageSlider from "@/components/ImageSlider";
 import LocationInFormation from "@/components/LocationInformation";
 import PropertyInformation from "@/components/PropertyInformation";
+import AbstractBackground from "@/components/AbstractBackground";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,7 +16,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center">
+    <main className="flex min-h-screen flex-col items-center relative">
+      <AbstractBackground />
       <ImageSlider />
       <PropertyInformation />
       <GalleryImages />

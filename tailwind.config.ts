@@ -18,6 +18,66 @@ const config: Config = {
           100: "rgb(33,37,41)",
         },
       },
+      animation: {
+        "border-flow": "border-flow 4s ease infinite",
+        "border-light": "border-light 8s linear infinite",
+        "border-light-reverse": "border-light-reverse 12s linear infinite",
+        shimmer: "shimmer 2s linear infinite",
+      },
+      keyframes: {
+        "border-flow": {
+          "0%, 100%": {
+            backgroundPosition: "0% 50%",
+            backgroundSize: "200% 200%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+            backgroundSize: "200% 200%",
+          },
+        },
+        "border-light": {
+          "0%": {
+            backgroundPosition: "0% 0%",
+          },
+          "25%": {
+            backgroundPosition: "100% 0%",
+          },
+          "50%": {
+            backgroundPosition: "100% 100%",
+          },
+          "75%": {
+            backgroundPosition: "0% 100%",
+          },
+          "100%": {
+            backgroundPosition: "0% 0%",
+          },
+        },
+        "border-light-reverse": {
+          "0%": {
+            backgroundPosition: "0% 0%",
+          },
+          "25%": {
+            backgroundPosition: "0% 100%",
+          },
+          "50%": {
+            backgroundPosition: "100% 100%",
+          },
+          "75%": {
+            backgroundPosition: "100% 0%",
+          },
+          "100%": {
+            backgroundPosition: "0% 0%",
+          },
+        },
+        shimmer: {
+          "0%": {
+            transform: "translateX(-100%)",
+          },
+          "100%": {
+            transform: "translateX(100%)",
+          },
+        },
+      },
     },
   },
   plugins: [
