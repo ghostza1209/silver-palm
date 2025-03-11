@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +21,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <Toaster position="bottom-center"/>
+        <Toaster position="bottom-center" />
         {children}
+        {process.env.NODE_ENV === "production" && (
+          <GoogleAnalytics gaId="G-T2V4MSEEZW" />
+        )}
       </body>
     </html>
   );
