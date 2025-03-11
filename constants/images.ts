@@ -1,10 +1,17 @@
-import { Image } from "react-grid-gallery";
+import { ReactNode } from "react";
+import { Key } from "react";
 
-export interface CustomImage extends Image {
+export interface Image {
+  key?: Key;
+  src: string;
+  width: number;
+  height: number;
+  alt?: string;
+  caption?: ReactNode;
   original: string;
 }
 
-export const images: CustomImage[] = [
+export const images: Image[] = [
   {
     src: "/images/back.jpg",
     original: "//images/back.jpg",
