@@ -33,15 +33,15 @@ function ImageSlider() {
   }, []);
 
   return (
-    <div className="w-full overflow-hidden max-w-screen-2xl relative">
+    <div className="w-full overflow-hidden relative">
       {/* Luxury overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/30 z-10 pointer-events-none"></div>
 
-      <Slider {...settings}>
+      <Slider {...settings} className="w-screen">
         {imageURLs.map((url, index) => (
           <div
             key={`img_slider_${index}`}
-            className="h-[200px] md:h-[800px] relative"
+            className="h-[200px] md:h-[800px] relative w-full"
           >
             <div className="hidden sm:flex top-0 absolute flex-col items-center w-full justify-center h-full text-white z-20">
               <div className="px-20 py-8 backdrop-blur-sm bg-black/10 rounded-xl">
@@ -96,9 +96,9 @@ function ImageSlider() {
             <Image
               fill
               src={url}
-              sizes="(max-width: 800px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              sizes="100vw"
               alt="Luxury villa"
-              className="object-cover"
+              className="object-cover w-screen"
               priority={index === 0}
             />
           </div>
