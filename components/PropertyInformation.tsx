@@ -105,8 +105,8 @@ export default function PropertyInformation() {
         </h2>
         <h3 className="mt-4 text-gray-600 font-light">
           This{" "}
-          <span className="font-medium text-amber-700">luxury pool villa</span>{" "}
-          is a 401.6 SqM with 3 bedrooms, and 4 bathrooms that is available for
+          <span className="font-medium text-amber-700">modern lifestyles villa</span>{" "}
+          is a 497 SqM with 3 bedrooms, and 4 bathrooms that is available for
           sale in Sri-Sunthon, Phuket, Thailand.
         </h3>
 
