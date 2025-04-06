@@ -6,7 +6,9 @@ export default function LocationInFormation() {
       <div className="flex flex-col sm:flex-row relative mx-auto max-w-7xl px-4 gap-10">
         <div className="w-full sm:w-[50%] pr-5">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 border-s-4 border-amber-500 pl-2">
-            Location
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-amber-700">
+              Location
+            </span>
           </h1>
           <p className="mt-4 text-base text-gray-500">
             Silver Palm villa are ideally located on the northwest coast of

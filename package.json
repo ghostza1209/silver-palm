@@ -27,6 +27,7 @@
     "react-hot-toast": "^2.4.1",
     "react-image-lightbox": "^5.1.4",
     "react-slick": "^0.30.2",
+    "react-zoom-pan-pinch": "^3.7.0",
     "slick-carousel": "^1.8.1",
     "validator": "^13.11.0",
     "yet-another-react-lightbox": "^3.21.7",

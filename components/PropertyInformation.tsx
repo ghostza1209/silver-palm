@@ -9,7 +9,7 @@ const features = [
     description: "240 SqM",
   },
   {
-    name: "Outdoor Area (including garden)",
+    name: "Outdoor Area",
     description: "247 SqM",
   },
   {
@@ -19,7 +19,7 @@ const features = [
   { name: "Bedrooms", description: "3" },
   { name: "Bathrooms", description: "4" },
   { name: "Gym room", description: "1" },
-  { name: "Study room", description: "1" },
+  { name: "Work space", description: "1" },
   { name: "Storage room", description: "1" },
   { name: "Laundry room", description: "1" },
   {
