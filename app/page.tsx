@@ -41,7 +41,7 @@ export default function Home() {
       <GalleryImages />
       <FloorPlan />
       <LocationInFormation />
-      <CanvaPresentation />
+      {/*<CanvaPresentation />*/}
       <ContactUs />
       <Footer />
     </main>
