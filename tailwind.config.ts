@@ -23,6 +23,8 @@ const config: Config = {
         "border-light": "border-light 8s linear infinite",
         "border-light-reverse": "border-light-reverse 12s linear infinite",
         shimmer: "shimmer 2s linear infinite",
+        "ping-once": "ping-once 0.8s ease-out",
+        "subtle-pulse": "subtle-pulse 4s ease-in-out infinite",
       },
       keyframes: {
         "border-flow": {
@@ -75,6 +77,24 @@ const config: Config = {
           },
           "100%": {
             transform: "translateX(100%)",
+          },
+        },
+        "ping-once": {
+          "0%": {
+            transform: "scale(1)",
+            opacity: "0.3",
+          },
+          "70%, 100%": {
+            transform: "scale(2)",
+            opacity: "0",
+          },
+        },
+        "subtle-pulse": {
+          "0%, 100%": {
+            boxShadow: "0 0 0 0 rgba(251, 191, 36, 0)",
+          },
+          "50%": {
+            boxShadow: "0 0 0 4px rgba(251, 191, 36, 0.2)",
           },
         },
       },

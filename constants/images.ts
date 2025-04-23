@@ -209,6 +209,13 @@ export const images: Image[] = [
     caption: "Pool View",
   },
   {
+    src: "/images/pool-view_3.jpg",
+    original: "//images/pool-view_3.jpg",
+    width: 850,
+    height: 500,
+    caption: "Pool View",
+  },
+  {
     src: "/images/second-floor.jpg",
     original: "//images/second-floor.jpg",
     width: 850,
