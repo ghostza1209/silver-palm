@@ -13,7 +13,7 @@ export default function LocationInFormation() {
           <p className="mt-4 text-base text-gray-500">
             Silver Palm is strategically located in one of Phuket’s most sought-after residential areas, offering effortless access to everything that matters. Just minutes away from renowned international schools, lifestyle shopping hubs, leading healthcare facilities, and pristine beaches like Bang Tao and Layan, this villa delivers unmatched convenience in a tropical paradise.
 
-            Whether you're a family seeking a permanent residence, an expat looking for comfort and community, or an investor exploring high-demand real estate in Phuket, Silver Palm places you at the heart of it all.
+            Whether you&#39;re a family seeking a permanent residence, an expat looking for comfort and community, or an investor exploring high-demand real estate in Phuket, Silver Palm places you at the heart of it all.
           </p>
           <p className="pt-10 font-semibold">Nearby Locations</p>
           <div className="text-gray-500">
