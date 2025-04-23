@@ -11,11 +11,9 @@ export default function LocationInFormation() {
             </span>
           </h1>
           <p className="mt-4 text-base text-gray-500">
-            Silver Palm villa are ideally located on the northwest coast of
-            Phuket, Thailand in Si-sunthon subdistrict. Careful consideration was taken in selecting this location,
-            which is not only centrally located on the island, but strikes a
-            strategic balance in favor of access to the airport, the finest
-            shopping and dining, schools, entertainment, and, beaches.
+            Silver Palm is strategically located in one of Phuket’s most sought-after residential areas, offering effortless access to everything that matters. Just minutes away from renowned international schools, lifestyle shopping hubs, leading healthcare facilities, and pristine beaches like Bang Tao and Layan, this villa delivers unmatched convenience in a tropical paradise.
+
+            Whether you're a family seeking a permanent residence, an expat looking for comfort and community, or an investor exploring high-demand real estate in Phuket, Silver Palm places you at the heart of it all.
           </p>
           <p className="pt-10 font-semibold">Nearby Locations</p>
           <div className="text-gray-500">
