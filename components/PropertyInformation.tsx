@@ -96,12 +96,15 @@ export default function PropertyInformation() {
         </div>
       </div>
 
-      <div className="relative">
+      <div className="relative group">
         <div className="absolute -left-4 top-0 h-12 w-1 bg-gradient-to-b from-amber-400 to-amber-300"></div>
-        <h2 className="text-4xl font-bold tracking-tight text-gray-900 pl-2">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-amber-700">
+        <h2 className="text-4xl font-bold tracking-tight text-gray-900 pl-2 relative">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-amber-700 relative inline-block">
             Information
+            {/* Luxury property underline animation */}
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 to-amber-600 group-hover:w-full transition-all duration-700 ease-in-out"></span>
           </span>
+
         </h2>
         <h3 className="mt-4 text-gray-600 font-light">
           This{" "}
@@ -114,10 +117,15 @@ export default function PropertyInformation() {
           {features.map((feature) => (
             <div
               key={feature.name}
-              className="border-t border-amber-100 pt-4 transition-all duration-300 hover:border-amber-300"
+              className="border-t border-amber-100 pt-4 transition-all duration-300 hover:border-amber-300 group/feature relative"
             >
-              <dt className="font-medium text-gray-900">{feature.name}</dt>
-              <dd className="mt-2 text-sm text-amber-700 font-medium">
+              {/* Luxury property feature animation */}
+              <div className="absolute -left-2 top-4 w-0.5 h-0 bg-amber-400 group-hover/feature:h-full transition-all duration-500 ease-out"></div>
+
+              <dt className="font-medium text-gray-900">
+                {feature.name}
+              </dt>
+              <dd className="mt-2 text-sm text-amber-700 font-medium group-hover/feature:translate-x-1 transition-transform duration-300">
                 {feature.description}
               </dd>
             </div>
@@ -125,21 +133,44 @@ export default function PropertyInformation() {
         </dl>
       </div>
       <div className="grid grid-cols-1 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-        <img
-          src="/images/dining-room.jpg"
-          alt="Living Room"
-          className="rounded-lg bg-gray-100 shadow-lg hover:shadow-2xl transition-shadow duration-300 ring-1 ring-amber-100"
-        />
-        <img
-          src="/images/front-view_2.jpg"
-          alt="Living Room"
-          className="rounded-lg bg-gray-100 shadow-lg hover:shadow-2xl transition-shadow duration-300 ring-1 ring-amber-100"
-        />
-        <img
-          src="/images/pool-view_2.jpg"
-          alt="Pool view of luxury villa"
-          className="rounded-lg bg-gray-100 shadow-lg hover:shadow-2xl transition-shadow duration-300 ring-1 ring-amber-100"
-        />
+        {/* Property image with luxury hover effect */}
+        <div className="relative group/img overflow-hidden rounded-lg">
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-600/20 to-amber-800/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-500 z-10"></div>
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent h-16 transform translate-y-full group-hover/img:translate-y-0 transition-transform duration-500 z-20 flex items-end p-3">
+            <span className="text-white text-sm font-medium opacity-0 group-hover/img:opacity-100 transition-opacity duration-500 delay-200 animate-luxury-fade-in">Elegant Dining Area</span>
+          </div>
+          <img
+            src="/images/dining-room.jpg"
+            alt="Dining Room"
+            className="rounded-lg bg-gray-100 shadow-lg group-hover/img:shadow-2xl transition-all duration-500 ring-1 ring-amber-100 group-hover/img:scale-105 w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Property image with luxury hover effect */}
+        <div className="relative group/img overflow-hidden rounded-lg">
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-600/20 to-amber-800/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-500 z-10"></div>
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent h-16 transform translate-y-full group-hover/img:translate-y-0 transition-transform duration-500 z-20 flex items-end p-3">
+            <span className="text-white text-sm font-medium opacity-0 group-hover/img:opacity-100 transition-opacity duration-500 delay-200 animate-luxury-fade-in">Modern Exterior Design</span>
+          </div>
+          <img
+            src="/images/front-view_2.jpg"
+            alt="Front View"
+            className="rounded-lg bg-gray-100 shadow-lg group-hover/img:shadow-2xl transition-all duration-500 ring-1 ring-amber-100 group-hover/img:scale-105 w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Property image with luxury hover effect */}
+        <div className="relative group/img overflow-hidden rounded-lg">
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-600/20 to-amber-800/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-500 z-10"></div>
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent h-16 transform translate-y-full group-hover/img:translate-y-0 transition-transform duration-500 z-20 flex items-end p-3">
+            <span className="text-white text-sm font-medium opacity-0 group-hover/img:opacity-100 transition-opacity duration-500 delay-200 animate-luxury-fade-in">Private Pool with Garden View</span>
+          </div>
+          <img
+            src="/images/pool-view_2.jpg"
+            alt="Pool view of luxury villa"
+            className="rounded-lg bg-gray-100 shadow-lg group-hover/img:shadow-2xl transition-all duration-500 ring-1 ring-amber-100 group-hover/img:scale-105 w-full h-full object-cover"
+          />
+        </div>
       </div>
     </div>
   );
