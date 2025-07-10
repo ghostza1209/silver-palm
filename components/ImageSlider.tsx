@@ -65,7 +65,7 @@ function ImageSlider() {
                 <p className="mt-6 text-3xl font-bold text-center">
                   Start from{" "}
                   <span className="text-amber-300 font-serif italic drop-shadow-lg">
-                    13.9 MB
+                    15.9 MB
                   </span>
                 </p>
 
@@ -87,7 +87,7 @@ function ImageSlider() {
                 <div className="w-[100px] h-[2px] bg-gradient-to-r from-amber-300 to-amber-500 my-3 mx-auto"></div>
                 <p className="text-xl font-bold text-center">
                   <span className="text-amber-300 font-serif italic">
-                    13.9 MB
+                    15.9 MB
                   </span>
                 </p>
               </div>
