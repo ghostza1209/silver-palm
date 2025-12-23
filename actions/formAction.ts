@@ -13,21 +13,32 @@ export async function addContactToGs(data: AddContactToGs) {
   formData.append("message", data.message);
   formData.append("date", format(new Date(), "MM/dd/yyyy H:i:s"));
 
-  fetch(
-    "https://script.google.com/macros/s/AKfycby3wN58jv_U6UNpR_bFAfF5HjDsdpol3-zI2dCxuruZ87oNZCu31OAn3fLl03lMyl14uw/exec",
-    {
-      method: "POST",
-      body: formData,
-      cache: "no-cache",
+  try {
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycby3wN58jv_U6UNpR_bFAfF5HjDsdpol3-zI2dCxuruZ87oNZCu31OAn3fLl03lMyl14uw/exec",
+      {
+        method: "POST",
+        body: formData,
+        cache: "no-cache",
+      }
+    );
+
+    if (!response.ok) {
+      return {
+        success: false,
+        errors: `Failed to submit form. Server returned status: ${response.status}`,
+      };
     }
-  ).catch((error: Error) => {
+
+    revalidatePath("/");
+
+    return { success: true, errors: [] };
+  } catch (error) {
+    const errorMessage =
+      error instanceof Error ? error.message : "Network error occurred";
     return {
       success: false,
-      errors: error.message,
+      errors: errorMessage,
     };
-  });
-
-  revalidatePath("/");
-
-  return { success: true, errors: [] };
+  }
 }

@@ -49,18 +49,45 @@ export default function ContactUs(): React.JSX.Element {
       return;
     }
     setRecaptchaError(null);
-    const addContactToGsWithData = addContactToGs.bind(null, data);
-    await addContactToGsWithData();
-    toast.success(
-      "We've received your inquiry and will be in contact with you shortly.",
-      {
-        duration: 5000,
-      }
-    );
 
-    reset();
-    recaptchaRef.current?.reset();
-    setIsVerified(false);
+    try {
+      const addContactToGsWithData = addContactToGs.bind(null, data);
+      const result = await addContactToGsWithData();
+
+      if (!result.success) {
+        const errorMessage =
+          typeof result.errors === "string"
+            ? result.errors
+            : "Failed to submit form. Please try again.";
+        toast.error(errorMessage, {
+          duration: 5000,
+        });
+        recaptchaRef.current?.reset();
+        setIsVerified(false);
+        return;
+      }
+
+      toast.success(
+        "We've received your inquiry and will be in contact with you shortly.",
+        {
+          duration: 5000,
+        }
+      );
+
+      reset();
+      recaptchaRef.current?.reset();
+      setIsVerified(false);
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : "Network error occurred. Please check your connection and try again.";
+      toast.error(errorMessage, {
+        duration: 5000,
+      });
+      recaptchaRef.current?.reset();
+      setIsVerified(false);
+    }
   };
 
   return (

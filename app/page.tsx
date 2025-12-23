@@ -6,7 +6,7 @@ import LocationInFormation from "@/components/LocationInformation";
 import PropertyInformation from "@/components/PropertyInformation";
 import FloorPlan from "@/components/FloorPlan";
 import AbstractBackground from "@/components/AbstractBackground";
-import CanvaPresentation from "@/components/CanvaPresentation";
+// import CanvaPresentation from "@/components/CanvaPresentation";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
